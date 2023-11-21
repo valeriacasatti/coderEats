@@ -11,7 +11,9 @@ const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cors());
+app.use(
+  cors({ origin: "http://localhost:5500", methods: ["GET", "POST", "PUT"] })
+);
 
 app.listen(port, () => console.log(`server running in port ${port}`));
 
