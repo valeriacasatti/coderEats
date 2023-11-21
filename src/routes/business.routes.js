@@ -3,9 +3,9 @@ import { BusinessController } from "../controllers/business.controller.js";
 
 const router = Router();
 
-router.get("/", BusinessController.getAllBusiness);
-router.get("/:id", BusinessController.getOneBusiness);
 router.post("/", BusinessController.createBusiness);
+router.get("/", BusinessController.getAllBusiness);
+router.get("/:id", BusinessController.getById);
 router.put("/:id/products", BusinessController.addProduct);
 
 export { router as businessRouter };

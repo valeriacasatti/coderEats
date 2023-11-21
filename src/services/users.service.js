@@ -1,8 +1,13 @@
+import { usersDao } from "../dao/index.js";
+
 export class UsersService {
-  static createUser = () => {
-    return "createUser";
+  static createUser = (info) => {
+    return usersDao.createUser(info);
   };
-  static getUser = () => {
-    return "getUser";
+  static getUsers = () => {
+    return usersDao.getUsers();
+  };
+  static getUserById = (id) => {
+    return usersDao.getUserById(id);
   };
 }

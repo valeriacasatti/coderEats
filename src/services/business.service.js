@@ -1,14 +1,16 @@
+import { businessDao } from "../dao/index.js";
+
 export class BusinessService {
   static getAllBusiness = () => {
-    return "getAllBusiness";
+    return businessDao.getAllBusiness();
   };
-  static getOneBusiness = () => {
-    return "getOneBusiness";
+  static getById = (id) => {
+    return businessDao.getById(id);
   };
-  static createBusiness = () => {
-    return "createBusiness";
+  static createBusiness = (info) => {
+    return businessDao.createBusiness(info);
   };
-  static addProduct = () => {
-    return "addProduct";
+  static addProduct = (id, info) => {
+    return businessDao.addProduct(id, info);
   };
 }
