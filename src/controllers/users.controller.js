@@ -1,3 +1,5 @@
+import { UsersService } from "../services/users.service.js";
+
 export class UsersController {
   static createUser = async (req, res) => {
     try {
