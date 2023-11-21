@@ -13,6 +13,14 @@ export class OrdersMongo {
       throw error;
     }
   }
+  async getOrders() {
+    try {
+      const result = await this.model.find();
+      return result;
+    } catch (error) {
+      throw error;
+    }
+  }
   async getOrderById(id) {
     try {
       const result = await this.model.findById(id);

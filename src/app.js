@@ -12,7 +12,9 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(
-  cors({ origin: "http://localhost:5500", methods: ["GET", "POST", "PUT"] })
+  cors({
+    origin: "http://127.0.0.1:5500",
+  })
 );
 
 app.listen(port, () => console.log(`server running in port ${port}`));

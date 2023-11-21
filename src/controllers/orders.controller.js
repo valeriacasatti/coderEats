@@ -3,6 +3,15 @@ import { UsersService } from "../services/users.service.js";
 import { BusinessService } from "../services/business.service.js";
 
 export class OrdersController {
+  static getOrders = async (req, res) => {
+    try {
+      const result = await OrdersService.getOrders();
+      res.json({ status: "success", data: result });
+    } catch (error) {
+      console.log(error);
+      res.json({ status: "error", message: error.message });
+    }
+  };
   static getOrderById = async (req, res) => {
     try {
       const id = req.params.id;
